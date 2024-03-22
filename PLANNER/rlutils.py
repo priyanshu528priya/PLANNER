@@ -61,7 +61,7 @@ MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
 
 
 def load_stage_intent_model():
-    args = torch.load('/DATA/priyanshu_2021cs26/neg-tour/dialogpt/stage-intent-model/training_args.bin')
+    args = torch.load('../neg-tour/dialogpt/stage-intent-model/training_args.bin')
     tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
     stage_intent_model = AutoModelWithLMHead.from_pretrained("/DATA/priyanshu_2021cs26/neg-tour/dialogpt/stage-intent-model")
     stage_intent_model.to('cuda')
