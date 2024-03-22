@@ -324,7 +324,7 @@ class bert_model(object):
 
 		# Load a trained model that you have fine-tuned
 		# output_model_file = os.path.join("nli_model/", "pytorch_model.bin")
-		output_model_file = "/DATA/komal_2021cs16/Priyanshu/neg-tour/nli_model/pytorch_model.bin"
+		output_model_file = "../neg-tour/nli_model/pytorch_model.bin"
 		model_state_dict = torch.load(output_model_file)
 		model = BertForSequenceClassification.from_pretrained('bert-base-uncased', state_dict=model_state_dict, num_labels=self.num_labels)
 		model.to(self.device)
