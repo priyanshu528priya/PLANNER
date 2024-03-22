@@ -16,7 +16,7 @@ def get_stage_prediction(curr_sentence):
     # Create a ClassificationModel
     model = ClassificationModel(
         'roberta',
-        '/DATA/komal_2021cs16/Priyanshu/neg-tour/outputs_stage_classifier/best_model/',
+        '../neg-tour/outputs_stage_classifier/best_model/',
         num_labels=4,
         args=model_args, use_cuda=False
     ) 
