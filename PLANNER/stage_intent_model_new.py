@@ -74,7 +74,7 @@ def load_and_cache_examples(tokenizer, df_test):
 def evaluate_stage_intent_model(df_test):
 
     tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
-    model = AutoModelWithLMHead.from_pretrained("/DATA/komal_2021cs16/Priyanshu/neg-tour/dialogpt/stage-intent-model")
+    model = AutoModelWithLMHead.from_pretrained("../planner/dialogpt/stage-intent-model")
     model = model.to('cuda')
 
     MODEL_CONFIG_CLASSES = list(MODEL_WITH_LM_HEAD_MAPPING.keys())
