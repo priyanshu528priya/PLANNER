@@ -33,8 +33,8 @@ model_B = AutoModelForCausalLM.from_pretrained("gpt2")
 device = 'cpu'
 model_A = model_A.to(device)
 model_B = model_B.to(device)
-model_A_states = torch.load("/DATA/komal_2021cs16/Priyanshu/planner/planner_model_full/model_v1/model_v1_A1.pth")
-model_B_states = torch.load("/DATA/komal_2021cs16/Priyanshu/planner/planner_model_full/model_v1/model_v1_B1.pth")
+model_A_states = torch.load("../planner/planner_model_full/model_v1/model_v1_A1.pth")
+model_B_states = torch.load("../planner/planner_model_full/model_v1/model_v1_B1.pth")
 model_A.load_state_dict(model_A_states)
 model_B.load_state_dict(model_B_states)
 
