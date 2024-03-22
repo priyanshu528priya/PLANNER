@@ -1173,8 +1173,8 @@ if __name__ == '__main__':
     device = torch.device("cuda" if use_cuda else "cpu")
     print('device_type: ',device)
     trainer = Trainer(modelname='model_v1',
-                      train_csvfile="/DATA/komal_2021cs16/Priyanshu/planner_final/data/sample/deal_train_sample.csv",
-                      val_csvfile="/DATA/komal_2021cs16/Priyanshu/planner_final/data/sample/deal_valid_sample.csv",
+                      train_csvfile="../planner_final/data/sample/deal_train_sample.csv",
+                      val_csvfile="../planner_final/data/sample/deal_valid_sample.csv",
                       device=torch.device("cuda"),
                       n_epochs=10,
                       batch_size=8,
